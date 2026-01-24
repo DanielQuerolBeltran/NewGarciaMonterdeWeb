@@ -1,6 +1,8 @@
-/* --- Variables y Reset --- */
+/* =============================================
+   VARIABLES Y RESET
+   ============================================= */
 :root {
-    --primary-color: #f59e0b; /* Naranja corporativo */
+    --primary-color: #f59e0b;
     --primary-hover: #d97706;
     --dark-text: #1a1a1a;
     --light-text: #4b5563;
@@ -33,7 +35,6 @@ a {
     transition: 0.3s ease;
 }
 
-/* --- Layout General --- */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -44,7 +45,9 @@ a {
     padding: 80px 0;
 }
 
-/* --- Header / Navegación --- */
+/* =============================================
+   HEADER / NAVEGACIÓN
+   ============================================= */
 .navbar {
     background: rgba(255, 255, 255, 0.95);
     height: 80px;
@@ -62,18 +65,6 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: var(--dark-text);
-    letter-spacing: -0.5px;
-}
-
-.logo span {
-    color: var(--light-text); /* Estilo de la imagen: EX en gris o similar */
 }
 
 .nav-links {
@@ -98,19 +89,20 @@ a {
     cursor: pointer;
 }
 
-/* --- Hero Section --- */
+/* =============================================
+   HERO SECTION
+   ============================================= */
 .hero {
     position: relative;
-    height: 90vh; /* Pantalla casi completa */
+    height: 90vh;
     min-height: 600px;
-    /* Imagen de fondo de excavadora */
     background-image: url('https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     color: var(--white);
-    margin-top: 0; /* Navbar es fixed, así que el hero sube */
+    margin-top: 0;
 }
 
 .hero-overlay {
@@ -127,7 +119,7 @@ a {
     position: relative;
     z-index: 2;
     max-width: 700px;
-    margin-left: 0; /* Alineado a la izquierda */
+    margin-left: 0;
 }
 
 .hero h1 {
@@ -144,7 +136,9 @@ a {
     font-weight: 300;
 }
 
-/* Botones */
+/* =============================================
+   BOTONES
+   ============================================= */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -156,7 +150,7 @@ a {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: #fff; /* Texto blanco para contraste */
+    color: #fff;
     border: 2px solid var(--primary-color);
     margin-right: 15px;
 }
@@ -177,7 +171,25 @@ a {
     color: var(--dark-text);
 }
 
-/* --- Sección La Empresa --- */
+.btn-outline-dark {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #d1d5db;
+    color: var(--dark-text);
+    border-radius: 4px;
+    font-weight: 600;
+    background: transparent;
+}
+
+.btn-outline-dark:hover {
+    border-color: var(--dark-text);
+    background: var(--dark-text);
+    color: var(--white);
+}
+
+/* =============================================
+   SECCIÓN ABOUT / LA EMPRESA
+   ============================================= */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -216,7 +228,7 @@ a {
 .stat-icon {
     width: 50px;
     height: 50px;
-    background: #fff4e0; /* Fondo amarillo muy claro */
+    background: #fff4e0;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -241,64 +253,67 @@ a {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* --- Sección Historia y Obras --- */
-.history {
-    background-color: var(--bg-light); /* Fondo gris claro en esta sección */
+/* =============================================
+   SECCIÓN SERVICIOS
+   ============================================= */
+.servicios {
+    padding: 90px 20px;
+    background: #f6f8fa;
 }
 
-/* Timeline */
-.timeline-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 0 auto 80px auto;
-    padding-top: 20px;
+.servicios-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.timeline-line {
-    position: absolute;
-    top: 45px; /* Altura ajustada a los iconos */
-    left: 40px;
-    right: 40px;
-    height: 2px;
-    background-color: #e5e7eb;
-    z-index: 0;
-}
-
-.timeline-item {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--bg-light); /* Para tapar la línea si es necesario */
-    padding: 0 10px;
-}
-
-.t-icon {
-    font-size: 2rem;
+.servicios-title {
+    font-size: 2.4rem;
+    color: #222;
     margin-bottom: 10px;
-    background: var(--bg-light);
 }
 
-.t-year {
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--dark-text);
-    margin-bottom: 5px;
-    display: block;
+.servicios-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 700px;
 }
 
-.t-desc {
-    font-size: 0.85rem;
-    color: var(--light-text);
-    max-width: 150px;
-    line-height: 1.3;
+.servicios-list {
+    list-style: none;
+    padding: 40px 60px;
+    margin: 0;
+    columns: 2;
+    column-gap: 80px;
+    background: #fff;
+    border-left: 6px solid #f4b400;
 }
 
-/* Projects Grid */
+.servicios-list li {
+    font-size: 1.25rem;
+    color: #222;
+    margin-bottom: 20px;
+    padding-left: 28px;
+    position: relative;
+    font-weight: 500;
+}
+
+.servicios-list li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #f4b400;
+    font-size: 0.9rem;
+    top: 4px;
+}
+
+/* =============================================
+   SECCIÓN HISTORIA Y PROYECTOS
+   ============================================= */
+.history {
+    background-color: var(--bg-light);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -378,23 +393,140 @@ a {
     text-align: center;
 }
 
-.btn-outline-dark {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid #d1d5db;
-    color: var(--dark-text);
-    border-radius: 4px;
+/* =============================================
+   SECCIÓN MAQUINARIA
+   ============================================= */
+.maquinaria {
+    padding: 90px 20px;
+    background: #f6f8fa;
+}
+
+.maquinaria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.maquinaria-title {
+    font-size: 2.4rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.maquinaria-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maquinaria-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.maquina-card {
+    width: 350px;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.maquina-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.maquina-img {
+    height: 360px;
+    overflow: hidden;
+    border-bottom: 4px solid #f4b400;
+}
+
+.maquina-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.maquina-card h3 {
+    padding: 18px;
+    font-size: 1.1rem;
     font-weight: 600;
-    background: transparent;
+    color: #222;
 }
 
-.btn-outline-dark:hover {
-    border-color: var(--dark-text);
-    background: var(--dark-text);
-    color: var(--white);
+/* =============================================
+   SECCIÓN CONTACTO
+   ============================================= */
+.contacto {
+    padding: 90px 20px;
+    background: #fff;
 }
 
-/* Footer */
+.contacto-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacto-title {
+    font-size: 2.4rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contacto-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 600px;
+}
+
+.contacto-info {
+    background: #f6f8fa;
+    padding: 50px 60px;
+    border-left: 6px solid #f4b400;
+}
+
+.contacto-item {
+    margin-bottom: 30px;
+}
+
+.contacto-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contacto-item a {
+    font-size: 1.3rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacto-item a:hover {
+    color: #f4b400;
+}
+
+.contacto-redes a {
+    margin-right: 20px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
 footer {
     text-align: center;
     padding: 40px;
@@ -404,203 +536,23 @@ footer {
     border-top: 1px solid #f3f4f6;
 }
 
-.servicios {
-    padding: 90px 20px;
-    background: #f6f8fa;
-  }
-  
-  .servicios-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .servicios-title {
-    font-size: 2.4rem;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .servicios-subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 50px;
-    max-width: 700px;
-  }
-  
-  .servicios-list {
-    list-style: none;
-    padding: 40px 60px;
-    margin: 0;
-    columns: 2;
-    column-gap: 80px;
-    background: #fff;
-    border-left: 6px solid #f4b400;
-  }
-  
-  .servicios-list li {
-    font-size: 1.25rem;
-    color: #222;
-    margin-bottom: 20px;
-    padding-left: 28px;
-    position: relative;
-    font-weight: 500;
-  }
-  
-  .servicios-list li::before {
-    content: "●";
-    position: absolute;
-    left: 0;
-    color: #f4b400;
-    font-size: 0.9rem;
-    top: 4px;
-  }
-
-  .maquinaria {
-    padding: 90px 20px;
-    background: #f6f8fa;
-  }
-  
-  .maquinaria-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .maquinaria-title {
-    font-size: 2.4rem;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .maquinaria-subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .maquinaria-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .maquina-card {
-    width: 350px;
-    text-decoration: none;
-    color: inherit;
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform .3s ease, box-shadow .3s ease;
-    position: relative;
-  }
-  
-  .maquina-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-  }
-  
-  .maquina-img {
-    height: 360px;
-    overflow: hidden;
-    border-bottom: 4px solid #f4b400;
-  }
-  
-  .maquina-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .maquina-card h3 {
-    padding: 18px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-  }
-
-
-  .contacto {
-    padding: 90px 20px;
-    background: #fff;
-  }
-  
-  .contacto-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .contacto-title {
-    font-size: 2.4rem;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .contacto-subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 50px;
-    max-width: 600px;
-  }
-  
-  .contacto-info {
-    background: #f6f8fa;
-    padding: 50px 60px;
-    border-left: 6px solid #f4b400;
-  }
-  
-  .contacto-item {
-    margin-bottom: 30px;
-  }
-  
-  .contacto-label {
-    display: block;
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .contacto-item a {
-    font-size: 1.3rem;
-    color: #222;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .contacto-item a:hover {
-    color: #f4b400;
-  }
-  
-  .contacto-redes a {
-    margin-right: 20px;
-  }
-  
-  
-  
-  /* móvil */
-  @media (max-width: 700px) {
+/* =============================================
+   RESPONSIVE (MÓVIL)
+   ============================================= */
+@media (max-width: 700px) {
     .servicios-list {
-      columns: 1;
-      padding: 30px;
+        columns: 1;
+        padding: 30px;
     }
-  }
-  
+}
 
-/* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
-    /* 1. Ajustes del Header */
+    /* Navegación móvil */
     .nav-links {
-        display: none; /* Oculto por defecto en móvil */
+        display: none;
         width: 100%;
         position: absolute;
-        top: 80px; /* Justo debajo de la barra de navegación */
+        top: 80px;
         left: 0;
         background-color: var(--white);
         flex-direction: column;
@@ -611,26 +563,23 @@ footer {
         border-top: 1px solid #eee;
     }
 
-    /* 2. Clase que activa el menú (¡Importante!) */
     .nav-links.active {
-        display: flex !important; /* Forzamos que se muestre */
+        display: flex !important;
     }
 
-    /* 3. Estilo de los enlaces en móvil */
     .nav-links li {
         margin: 15px 0;
         width: 100%;
     }
-    
+
     .nav-links a {
         display: block;
         font-size: 1.1rem;
         padding: 10px;
     }
 
-    /* 4. Botón Hamburguesa */
     .menu-toggle {
-        display: block; /* Visible en móvil */
+        display: block;
         font-size: 1.8rem;
         cursor: pointer;
         color: var(--dark-text);
@@ -638,47 +587,52 @@ footer {
         user-select: none;
     }
 
-    /* 5. Ajustes generales para móvil */
+    /* Hero móvil */
     .hero {
         text-align: center;
         justify-content: center;
     }
-    
+
     .hero-content {
         margin: 0;
         padding: 0 15px;
     }
-    
-    .hero h1 { font-size: 2.5rem; }
-    
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
     .hero-buttons {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
-    
-    .btn { width: 100%; margin: 0; }
 
-    .about-grid { grid-template-columns: 1fr; }
-    .about-image { order: -1; margin-bottom: 30px; }
-    
-    .timeline-container {
-        flex-direction: column;
-        padding-left: 20px;
-        align-items: flex-start;
-        gap: 30px;
+    .btn {
+        width: 100%;
+        margin: 0;
     }
 
-    .timeline-line {
-        width: 2px;
-        height: 100%;
-        left: 36px;
-        top: 0;
+    /* About móvil */
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    .timeline-item {
-        flex-direction: row;
-        gap: 20px;
-        text-align: left;
+    .about-image {
+        order: -1;
+        margin-bottom: 30px;
     }
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
