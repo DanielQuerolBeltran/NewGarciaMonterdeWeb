@@ -93,31 +93,59 @@
                 <h2>Maquinaria</h2>
             </div>
           <p class="maquinaria-subtitle">
-            Contamos con maquinaria propia, moderna y adaptada a todo tipo de trabajos.
+            Contamos con maquinaria propia, moderna y adaptada a todo tipo de trabajos
           </p>
       
-          <div class="maquinaria-grid">
-            <a href="#maq1" class="maquina-card">
-                <div class="maquina-img">
-                  <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8" alt="Excavadora orugas">
-                </div>
-                <h3>Excavadora de orugas</h3>
-              </a>
-        
-              <a href="#maq2" class="maquina-card">
-                <div class="maquina-img">
-                  <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8" alt="Retroexcavadora">
-                </div>
-                <h3>Retroexcavadora</h3>
-              </a>
-        
-              <a href="#maq3" class="maquina-card">
-                <div class="maquina-img">
-                  <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8" alt="Pala cargadora">
-                </div>
-                <h3>Pala cargadora</h3>
-              </a>
-          </div>
+                    <div class="maquinaria-grid">
+                        <a href="#" class="maquina-card" data-folder="CASE CX290" data-files="CASE CX290 (1).jpeg|CASE CX290 (2).jpeg|CASE CX290 (3).jpeg|CASE CX290 (4).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/CASE CX290/CASE CX290 (1).jpeg" alt="CASE CX290">
+                                </div>
+                                <h3>CASE CX290</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="CATERPILLAR 320E" data-files="CATERPILLAR 320E (1).jpeg|CATERPILLAR 320E (2).jpeg|CATERPILLAR 320E (3).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/CATERPILLAR 320E/CATERPILLAR 320E (1).jpeg" alt="CATERPILLAR 320E">
+                                </div>
+                                <h3>CATERPILLAR 320E</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="CATERPILLAR 953C" data-files="CATERPILLAR 953C (1).jpeg|CATERPILLAR 953C (2).jpeg|CATERPILLAR 953C (3).jpeg|CATERPILLAR 953C (4).jpeg|CATERPILLAR 953C (5).jpeg|CATERPILLAR 953C (6).jpeg|CATERPILLAR 953C (7).jpeg|CATERPILLAR 953C (8).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/CATERPILLAR 953C/CATERPILLAR 953C (1).jpeg" alt="CATERPILLAR 953C">
+                                </div>
+                                <h3>CATERPILLAR 953C</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="KOMATSU PC210" data-files="KOMATSU PC210 (1).jpeg|KOMATSU PC210 (1).jpg|KOMATSU PC210 (2).jpeg|KOMATSU PC210 (2).jpg|KOMATSU PC210 (3).jpeg|KOMATSU PC210 (3).jpg|KOMATSU PC210 (4).jpeg|KOMATSU PC210 (4).jpg|KOMATSU PC210 (5).jpeg|KOMATSU PC210 (5).jpg|KOMATSU PC210 (6).jpeg|KOMATSU PC210.jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/KOMATSU PC210/KOMATSU PC210.jpeg" alt="KOMATSU PC210">
+                                </div>
+                                <h3>KOMATSU PC210</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="LIEBHER 906" data-files="LIEBHER 906.jpeg|LIEBHER 906 (1).jpeg|LIEBHER 906 (2).jpeg|LIEBHER 906 (3).jpeg|LIEBHER 906 (4).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/LIEBHER 906/LIEBHER 906.jpeg" alt="LIEBHER 906">
+                                </div>
+                                <h3>LIEBHER 906</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="LIEBHER 934" data-files="LIEBHER 934.jpeg|LIEBHER 934 (1).jpeg|LIEBHER 934 (2).jpeg|LIEBHER 934 (3).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/LIEBHER 934/LIEBHER 934.jpeg" alt="LIEBHER 934">
+                                </div>
+                                <h3>LIEBHER 934</h3>
+                        </a>
+
+                        <a href="#" class="maquina-card" data-folder="RODILLO AMMAN" data-files="RODILLO AMMAN (1).jpeg|RODILLO AMMAN (2).jpeg|RODILLO AMMAN (3).jpeg">
+                                <div class="maquina-img">
+                                    <img src="img/maquinaria/RODILLO AMMAN/RODILLO AMMAN (1).jpeg" alt="RODILLO AMMAN">
+                                </div>
+                                <h3>RODILLO AMMAN</h3>
+                        </a>
+                    </div>
         </div>
       </section>
 
@@ -224,8 +252,78 @@
       </section>
       
       
-    <footer>
-        <p>&copy; 2026 TerraEx Construcciones. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        <!-- Gallery modal -->
+        <style>
+        .gallery-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;align-items:center;justify-content:center}
+        .gallery-modal.open{display:flex}
+        .gm-content{max-width:95%;text-align:center}
+        .gm-content img{max-width:90vw;max-height:80vh;object-fit:contain;border-radius:6px}
+        .gm-caption{color:#fff;text-align:center;margin-top:12px;font-size:14px}
+        .gm-close{position:absolute;top:18px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+        .gm-prev,.gm-next{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:0;color:#fff;font-size:48px;padding:12px;cursor:pointer}
+        .gm-prev{left:12px}.gm-next{right:12px}
+        </style>
+
+        <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
+            <button class="gm-close" aria-label="Cerrar">&times;</button>
+            <button class="gm-prev" aria-label="Anterior">&#10094;</button>
+            <div class="gm-content">
+                <img src="" alt="">
+                <p class="gm-caption"></p>
+            </div>
+            <button class="gm-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+
+        <script>
+        (function(){
+            const modal = document.getElementById('gallery-modal');
+            const imgEl = modal.querySelector('img');
+            const caption = modal.querySelector('.gm-caption');
+            const closeBtn = modal.querySelector('.gm-close');
+            const nextBtn = modal.querySelector('.gm-next');
+            const prevBtn = modal.querySelector('.gm-prev');
+            let currentIndex = 0;
+            let currentGallery = [];
+
+            function openGallery(files, folder, start=0){
+                currentGallery = files.map(f=>encodeURI('img/maquinaria/'+folder+'/'+f));
+                currentIndex = start;
+                showImage();
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden','false');
+                document.body.style.overflow='hidden';
+            }
+            function closeGallery(){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+                document.body.style.overflow='';
+            }
+            function showImage(){
+                imgEl.src = currentGallery[currentIndex];
+                caption.textContent = (currentIndex+1)+' / '+currentGallery.length;
+            }
+            function next(){ if(!currentGallery.length) return; currentIndex = (currentIndex+1)%currentGallery.length; showImage(); }
+            function prev(){ if(!currentGallery.length) return; currentIndex = (currentIndex-1+currentGallery.length)%currentGallery.length; showImage(); }
+
+            document.querySelectorAll('.maquina-card').forEach(card=>{
+                card.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const folder = this.dataset.folder;
+                    const files = (this.dataset.files||'').split('|').filter(Boolean);
+                    if(files.length) openGallery(files, folder, 0);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeGallery);
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+            modal.addEventListener('click', function(e){ if(e.target===modal) closeGallery(); });
+            document.addEventListener('keydown', function(e){ if(modal.classList.contains('open')){ if(e.key==='Escape') closeGallery(); if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); }});
+        })();
+        </script>
+
+        <footer>
+                <p>&copy; 2026 TerraEx Construcciones. Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>
