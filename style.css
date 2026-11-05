@@ -613,6 +613,8 @@ footer {
 
     .hero h1 {
         font-size: 3rem;
+        width: 85vw;
+        margin-inline: auto;
     }
 
     .hero h2 {
@@ -642,6 +644,12 @@ footer {
 }
 
 @media (max-width: 400px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 350px) {
     .hero h1 {
         font-size: 2.2rem;
     }
